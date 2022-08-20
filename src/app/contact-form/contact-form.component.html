@@ -1,0 +1,14 @@
+<div class="contact">
+    <div>
+        <h1>Contact Form</h1>
+        <h2>We are always happy to find out what's on your mind</h2>
+        <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)" className="contact__form">
+            <input type="email" name="Email" placeholder="Email" formControlName="Email" />
+            <input type="text" name="Name" placeholder="Name" formControlName="Name" />
+            <textarea formControlName="Message" name="Message" maxlength="120" placeholder="Message"></textarea><br />
+            <button type="submit" class="btn btn-primary" [disabled]="!FormData.valid">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
